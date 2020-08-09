@@ -8,7 +8,9 @@
     "build": "babel src -d public",
     "start": "nodemon --exec babel-node src/index.js",
     "pretest": "eslint --ignore-pattern 'public/*' --ignore-pattern 'node_modules/*' --ignore-pattern 'test/*'",
-    "lint:fix": "eslint --fix src/*"
+    "lint:fix": "eslint --fix src/*",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",

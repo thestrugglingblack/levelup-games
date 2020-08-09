@@ -75,7 +75,12 @@ in the web space.
 
 ## To Run
 ### With Docker
-_Coming Soon!_
+1. Build docker image.
+`docker build . -t levelup-games`
+2. Run the newly built docker image `levelup-games`.
+`docker run -d --name levelup-games -P 1234:1234 levelup-games:latest`
+3. To ping the service.
+`docker exec -it levelup-games curl http://localhost:1234/generate`
 
 ### Without Docker
 1. `nvm use`
@@ -85,10 +90,10 @@ _Coming Soon!_
 
 ## Roadmap
 - [ ] Convert to Typescript
-- [ ] Setup code coverage
+- [X] Setup code coverage
 - [ ] Setup ES Lint or TS Lint
 - [ ] Docker
-    - [ ] Create Dockerfile
+    - [X] Create Dockerfile
     - [ ] Saved in GitHub Registry
 - [ ] CI/CD
     - [ ] Setup GitHub Actions
